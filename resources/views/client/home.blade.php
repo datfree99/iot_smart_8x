@@ -18,268 +18,87 @@
             </div>
 
             <div class="section-content relative">
-
-
                 <div class="row row-collapse row-full-width" id="row-422698953">
-
-
                     <div id="col-1655028689" class="col small-12 large-12">
                         <div class="col-inner">
-
-
                             <div class="slider-wrapper relative hide-for-small" id="slider-215130016">
                                 <div
                                     class="slider slider-nav-circle slider-nav-large slider-nav-light slider-style-normal"
                                     data-flickity-options="{
-                                                                    &quot;cellAlign&quot;: &quot;center&quot;,
-                                                                    &quot;imagesLoaded&quot;: true,
-                                                                    &quot;lazyLoad&quot;: 1,
-                                                                    &quot;freeScroll&quot;: false,
-                                                                    &quot;wrapAround&quot;: true,
-                                                                    &quot;autoPlay&quot;: 6000,
-                                                                    &quot;pauseAutoPlayOnHover&quot; : true,
-                                                                    &quot;prevNextButtons&quot;: true,
-                                                                    &quot;contain&quot; : true,
-                                                                    &quot;adaptiveHeight&quot; : true,
-                                                                    &quot;dragThreshold&quot; : 10,
-                                                                    &quot;percentPosition&quot;: true,
-                                                                    &quot;pageDots&quot;: false,
-                                                                    &quot;rightToLeft&quot;: false,
-                                                                    &quot;draggable&quot;: true,
-                                                                    &quot;selectedAttraction&quot;: 0.1,
-                                                                    &quot;parallax&quot; : 0,
-                                                                    &quot;friction&quot;: 0.6
-                                        }">
+                                        &quot;cellAlign&quot;: &quot;center&quot;,
+                                        &quot;imagesLoaded&quot;: true,
+                                        &quot;lazyLoad&quot;: 1,
+                                        &quot;freeScroll&quot;: false,
+                                        &quot;wrapAround&quot;: true,
+                                        &quot;autoPlay&quot;: 6000,
+                                        &quot;pauseAutoPlayOnHover&quot; : true,
+                                        &quot;prevNextButtons&quot;: true,
+                                        &quot;contain&quot; : true,
+                                        &quot;adaptiveHeight&quot; : true,
+                                        &quot;dragThreshold&quot; : 10,
+                                        &quot;percentPosition&quot;: true,
+                                        &quot;pageDots&quot;: false,
+                                        &quot;rightToLeft&quot;: false,
+                                        &quot;draggable&quot;: true,
+                                        &quot;selectedAttraction&quot;: 0.1,
+                                        &quot;parallax&quot; : 0,
+                                        &quot;friction&quot;: 0.6
+                                    }">
+                                    @foreach($sliders as $slider)
+                                        <div class="banner has-hover" id="banner-{{$slider->id}}">
+                                            <div class="banner-inner fill">
+                                                <div class="banner-bg fill">
+                                                    <div class="bg fill bg-fill "></div>
+                                                    <div class="overlay"></div>
+                                                </div>
 
-                                    <div class="banner has-hover" id="banner-1509715905">
-                                        <div class="banner-inner fill">
-                                            <div class="banner-bg fill">
-                                                <div class="bg fill bg-fill "></div>
-                                                <div class="overlay"></div>
-                                            </div>
-
-                                            <div class="banner-layers container">
-                                                <a class="fill" href="#" target="_blank" rel="noopener noreferrer">
-                                                    <div class="fill banner-link"></div>
-                                                </a>
-                                                <div id="text-box-688268396"
-                                                     class="text-box banner-layer x50 md-x50 lg-x50 y90 md-y90 lg-y90 res-text">
-                                                    <div data-animate="fadeInRight">
-                                                        <div class="text-box-content text dark text-shadow-2">
-                                                            <div class="text-inner text-center">
-                                                                <div id="text-3631499438" class="text">
-                                                                    <h3><strong>CUNG CẤP CÁC GIẢI PHÁP VỀ
-                                                                            CNTT</strong></h3>
-                                                                    <style>
-                                                                        #text-3631499438 {
-                                                                            text-align: center;
-                                                                        }
-                                                                    </style>
+                                                <div class="banner-layers container">
+                                                    <a class="fill" href="#" target="_blank" rel="noopener noreferrer">
+                                                        <div class="fill banner-link"></div>
+                                                    </a>
+                                                    <div class="text-box banner-layer x50 md-x50 lg-x50 y90 md-y90 lg-y90 res-text">
+                                                        <div data-animate="fadeInRight">
+                                                            <div class="text-box-content text dark text-shadow-2">
+                                                                <div class="text-inner text-center">
+                                                                    <div class="text">
+                                                                        <h3>
+                                                                            <strong style="text-transform: uppercase">{{$slider->renderTitle()}}</strong>
+                                                                        </h3>
+                                                                    </div>
                                                                 </div>
-
-
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <style>
-                                                        #text-box-688268396 {
-                                                            width: 50%;
-                                                        }
-
-                                                        #text-box-688268396 .text-box-content {
-                                                            font-size: 100%;
-                                                        }
-                                                    </style>
                                                 </div>
-
-
                                             </div>
+                                            <style>
+                                                #banner-{{$slider->id}} {
+                                                    padding-top: 46%;
+                                                }
+
+                                                #banner-{{$slider->id}} .bg.bg-loaded {
+                                                    background-image: url("{{$slider->image}}");
+                                                }
+
+                                                #banner-{{$slider->id}} .overlay {
+                                                    background-color: rgba(0, 0, 0, 0.06);
+                                                }
+
+                                                #banner-{{$slider->id}} .ux-shape-divider--top svg {
+                                                    height: 150px;
+                                                    --divider-top-width: 100%;
+                                                }
+
+                                                #banner-{{$slider->id}} .ux-shape-divider--bottom svg {
+                                                    height: 150px;
+                                                    --divider-width: 100%;
+                                                }
+                                            </style>
                                         </div>
 
-
-                                        <style>
-                                            #banner-1509715905 {
-                                                padding-top: 46%;
-                                            }
-
-                                            #banner-1509715905 .bg.bg-loaded {
-                                                background-image: url(assets/images/newslide2.jpg);
-                                            }
-
-                                            #banner-1509715905 .overlay {
-                                                background-color: rgba(0, 0, 0, 0.06);
-                                            }
-
-                                            #banner-1509715905 .ux-shape-divider--top svg {
-                                                height: 150px;
-                                                --divider-top-width: 100%;
-                                            }
-
-                                            #banner-1509715905 .ux-shape-divider--bottom svg {
-                                                height: 150px;
-                                                --divider-width: 100%;
-                                            }
-                                        </style>
-                                    </div>
+                                    @endforeach
 
 
-                                    <div class="banner has-hover" id="banner-596901721">
-                                        <div class="banner-inner fill">
-                                            <div class="banner-bg fill">
-                                                <div class="bg fill bg-fill "></div>
-                                                <div class="overlay"></div>
-                                            </div>
-
-                                            <div class="banner-layers container">
-                                                <a class="fill" href="#" target="_blank" rel="noopener noreferrer">
-                                                    <div class="fill banner-link"></div>
-                                                </a>
-
-                                                <div id="text-box-898889158"
-                                                     class="text-box banner-layer x80 md-x80 lg-x80 y25 md-y25 lg-y25 res-text">
-                                                    <div data-animate="fadeInLeft">
-                                                        <div class="text-box-content text text-shadow-1">
-
-                                                            <div class="text-inner text-center">
-
-
-                                                                <div id="text-490996920" class="text">
-
-
-                                                                    <h3 style="line-height:1.3em;"><strong>CÁC GIẢI
-                                                                            PHÁP VỀ<br>TRUYỀN HÌNH TRỰC
-                                                                            TUYẾN<br></strong></h3>
-
-                                                                    <style>
-                                                                        #text-490996920 {
-                                                                            text-align: center;
-                                                                        }
-                                                                    </style>
-                                                                </div>
-
-
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <style>
-                                                        #text-box-898889158 {
-                                                            width: 50%;
-                                                        }
-
-                                                        #text-box-898889158 .text-box-content {
-                                                            font-size: 100%;
-                                                        }
-                                                    </style>
-                                                </div>
-
-
-                                            </div>
-                                        </div>
-
-
-                                        <style>
-                                            #banner-596901721 {
-                                                padding-top: 46%;
-                                            }
-
-                                            #banner-596901721 .bg.bg-loaded {
-                                                background-image: url(assets/images/newslide3.jpg);
-                                            }
-
-                                            #banner-596901721 .overlay {
-                                                background-color: rgba(0, 0, 0, 0.06);
-                                            }
-
-                                            #banner-596901721 .ux-shape-divider--top svg {
-                                                height: 150px;
-                                                --divider-top-width: 100%;
-                                            }
-
-                                            #banner-596901721 .ux-shape-divider--bottom svg {
-                                                height: 150px;
-                                                --divider-width: 100%;
-                                            }
-                                        </style>
-                                    </div>
-
-
-                                    <div class="banner has-hover" id="banner-199590614">
-                                        <div class="banner-inner fill">
-                                            <div class="banner-bg fill">
-                                                <div class="bg fill bg-fill "></div>
-                                                <div class="overlay"></div>
-                                            </div>
-
-                                            <div class="banner-layers container">
-                                                <a class="fill" href="#" target="_blank" rel="noopener noreferrer">
-                                                    <div class="fill banner-link"></div>
-                                                </a>
-
-                                                <div id="text-box-2134055058"
-                                                     class="text-box banner-layer x80 md-x80 lg-x80 y50 md-y50 lg-y50 res-text">
-                                                    <div data-animate="bounceIn">
-                                                        <div class="text-box-content text dark text-shadow-1">
-
-                                                            <div class="text-inner text-center">
-
-
-                                                                <div id="text-941972047" class="text">
-
-
-                                                                    <h3 style="line-height:1.3em;"><strong>GIẢI PHÁP
-                                                                            VỀ CAMERA GIÁM SÁT</strong></h3>
-
-                                                                    <style>
-                                                                        #text-941972047 {
-                                                                            text-align: center;
-                                                                        }
-                                                                    </style>
-                                                                </div>
-
-
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <style>
-                                                        #text-box-2134055058 {
-                                                            width: 50%;
-                                                        }
-
-                                                        #text-box-2134055058 .text-box-content {
-                                                            font-size: 100%;
-                                                        }
-                                                    </style>
-                                                </div>
-
-
-                                            </div>
-                                        </div>
-
-
-                                        <style>
-                                            #banner-199590614 {
-                                                padding-top: 46%;
-                                            }
-
-                                            #banner-199590614 .bg.bg-loaded {
-                                                background-image: url(assets/images/newslide1.jpg);
-                                            }
-
-                                            #banner-199590614 .overlay {
-                                                background-color: rgba(0, 0, 0, 0.06);
-                                            }
-
-                                            #banner-199590614 .ux-shape-divider--top svg {
-                                                height: 150px;
-                                                --divider-top-width: 100%;
-                                            }
-
-                                            #banner-199590614 .ux-shape-divider--bottom svg {
-                                                height: 150px;
-                                                --divider-width: 100%;
-                                            }
-                                        </style>
-                                    </div>
 
 
                                 </div>

@@ -29,5 +29,8 @@ class SliderModel extends Model
     protected $table = 'sliders';
     protected $guarded = ['id'];
 
-
+    public function renderTitle()
+    {
+        return $this->title;
+    }
 }

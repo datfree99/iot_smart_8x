@@ -5,12 +5,16 @@ namespace App\Http\Controllers\Client;
 use App\Http\Controllers\Controller;
 use App\Models\CategoryModel;
 use App\Models\PostModel;
+use App\Models\SliderModel;
 
 class HomeController extends Controller
 {
     public function index()
     {
-        return view('client.home');
+        $sliders = SliderModel::get();
+
+
+        return view('client.home', compact('sliders'));
     }
 
     public function aboutUs()

@@ -48,7 +48,7 @@
                             <td>{{$slider->title}}</td>
                             <td>{{$slider->redirect}}</td>
                             <td>
-                                <img src="{{$slider->image}}" alt="$slider->title" width="210" height="100">
+                                <img src="{{$slider->image}}" alt="{{$slider->title}}" width="210" height="100">
                             </td>
                             <td>
                                 <a href="{{route('admin.slider.edit', ['slider' => $slider->id])}}" class="btn btn-link">
