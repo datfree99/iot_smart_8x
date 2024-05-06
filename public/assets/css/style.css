@@ -753,24 +753,6 @@ a:hover {
 }
 .show-all-icon.contact-icons-right {right: 13px;}
 
-#section_home {
-    padding-top: 0px;
-    padding-bottom: 0px;
-}
-
-#section_home .ux-shape-divider--top svg {
-    height: 150px;
-    --divider-top-width: 100%;
-}
-
-#section_home .ux-shape-divider--bottom svg {
-    height: 50px;
-    --divider-width: 100%;
-}
-
-#section_home .ux-shape-divider--bottom .ux-shape-fill {
-    fill: rgb(245, 245, 245);
-}
 @font-face {
     font-family: "fl-icons";
     font-display: block;

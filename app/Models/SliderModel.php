@@ -29,8 +29,5 @@ class SliderModel extends Model
     protected $table = 'sliders';
     protected $guarded = ['id'];
 
-    public function renderTitle()
-    {
-        return \App::getLocale() == 'vi' ? $this->title_vi : $this->title_en;
-    }
+
 }

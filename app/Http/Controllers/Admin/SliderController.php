@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\SliderModel;
-use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\Request;
 
 class SliderController extends Controller
@@ -24,11 +23,7 @@ class SliderController extends Controller
         $sliders = SliderModel::query();
 
         if ($request->get('search')) {
-            $search = $request->get('search');
-            $sliders = $sliders->where(function (Builder $query) use ($search) {
-                $query->where('title_vi', 'like', '%' . $search . '%')
-                    ->orWhere('title_en', 'like', '%' . $search . '%');
-            });
+            $sliders = $sliders->where('title', 'like', '%' . $request->get('search') . '%');
         }
 
         $sliders = $sliders
@@ -58,8 +53,7 @@ class SliderController extends Controller
         ]);
 
         SliderModel::create([
-            'title_vi' => $request->get('title_vi'),
-            'title_en' => $request->get('title_en'),
+            'title' => $request->get('title'),
             'redirect' => $request->get('redirect'),
             'image' => $request->get('image')
         ]);
@@ -91,8 +85,7 @@ class SliderController extends Controller
         ]);
 
         $slider->update([
-            'title_vi' => $request->get('title_vi'),
-            'title_en' => $request->get('title_en'),
+            'title' => $request->get('title'),
             'redirect' => $request->get('redirect'),
             'image' => $request->get('image')
         ]);

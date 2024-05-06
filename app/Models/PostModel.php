@@ -77,19 +77,4 @@ class PostModel extends Model
 
         return '<span class="text-info">Bản nháp</span>';
     }
-
-    public function renderTitle()
-    {
-        return $this->title;
-    }
-
-    public function renderDescription()
-    {
-        return $this->description;
-    }
-
-    public function renderContents()
-    {
-        return $this->contents;
-    }
 }
