@@ -36,7 +36,8 @@
                 <table class="table dataTable" id="dataTable">
                     <thead>
                     <tr>
-                        <th>Tiêu đề</th>
+                        <th>Tiêu đề Vi</th>
+                        <th>Tiêu đề En</th>
                         <th>Redirect</th>
                         <th>Hình ảnh</th>
                         <th style="width: 100px;">Action</th>
@@ -45,10 +46,11 @@
                     <tbody>
                     @foreach($sliders as $slider)
                         <tr>
-                            <td>{{$slider->title}}</td>
+                            <td>{{$slider->title_vi}}</td>
+                            <td>{{$slider->title_en}}</td>
                             <td>{{$slider->redirect}}</td>
                             <td>
-                                <img src="{{$slider->image}}" alt="$slider->title" width="210" height="100">
+                                <img src="{{$slider->image}}" alt="{{$slider->title}}" width="210" height="100">
                             </td>
                             <td>
                                 <a href="{{route('admin.slider.edit', ['slider' => $slider->id])}}" class="btn btn-link">

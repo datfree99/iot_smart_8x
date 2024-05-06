@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>Iotsmart - Giải pháp toàn diện về CNTT</title>
+    <title>Iot smart - Giải pháp tự động hóa</title>
 
     <link rel="stylesheet" id="flatsome-style-css" href="{{asset("assets/css/all.min.css")}}" type="text/css" media="all">
     <link rel="stylesheet" id="flatsome-main-css" href="{{asset("assets/css/flatsome.css")}}" type="text/css" media="all">
@@ -98,7 +98,9 @@
     /* ]]> */
 </script>
 <script type="text/javascript" src="{{asset("assets/js/flatsome.js")}}" id="flatsome-js-js"></script>
-<script type="text/javascript" src="{{asset("assets/js/flatsome-slider.js")}}" id="flatsome-js-js"></script>
+
+@yield('vendor_scripts')
+
 <script type="text/javascript" src="{{asset("assets/js/flatsome-lazy-load.js")}}" id="flatsome-lazy-js"></script>
 <script>
     jQuery(document).ready(function (e) {

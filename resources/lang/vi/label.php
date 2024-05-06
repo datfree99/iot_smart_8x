@@ -3,7 +3,7 @@ return [
     'products' => "Sản phẩm",
     'categories' => "Danh mục",
     'home' => 'Trang chủ',
-    'about_us' => 'Giới thiệu',
+    'about_us' => 'Về chúng tôi',
     'service' => 'Dịch vụ',
     'solution' => 'Giải pháp',
     'customers' => 'Khách hàng',

@@ -6,15 +6,14 @@
                     <ul class="nav nav-left medium-nav-center nav-small  nav-divided">
                         <li class="header-contact-wrapper">
                             <ul id="header-contact" class="nav nav-divided nav-uppercase header-contact">
-
                                 <li class="">
-                                    <a href="mailto:datdev@iotsmart.vn" class="tooltip" title="datdev@iotsmart.vn">
-                                        <i class="icon-envelop" style="font-size:16px;"></i> <span>datdev@iotsmart.vn</span>
+                                    <a href="mailto:{{business()->getInfo('email')}}" class="tooltip" title="{{business()->getInfo('email')}}">
+                                        <i class="icon-envelop" style="font-size:16px;"></i> <span>{{business()->getInfo('email')}}</span>
                                     </a>
                                 </li>
                                 <li class="">
-                                    <a href="tel:" class="tooltip" title="0123 456 789">
-                                        <i class="icon-phone" style="font-size:16px;"></i> <span>0123 456 789</span>
+                                    <a href="tel:{{business()->getInfo('tel')}}" class="tooltip" title="{{business()->getInfo('tel')}}">
+                                        <i class="icon-phone" style="font-size:16px;"></i> <span>{{business()->getInfo('tel')}}</span>
                                     </a>
                                 </li>
                             </ul>

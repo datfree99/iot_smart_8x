@@ -137,10 +137,10 @@
 @if($showCateDesktop)
     <div class="flex-col hide-for-medium flex-right">
         <ul class="header-nav header-nav-main nav nav-right  nav-size-large nav-spacing-xlarge">
-            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-60 current_page_item active menu-item-design-default">
+            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-60 current_page_item menu-item-design-default @if(request()->routeIs(['home'])) active @endif">
                 <a href="{{route('home')}}" aria-current="page" class="nav-top-link"> {{trans("label.home")}} </a>
             </li>
-            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-design-default">
+            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-design-default @if(request()->routeIs('about-us')) active @endif">
                 <a href="{{route('about-us')}}" class="nav-top-link">{{trans("label.about_us")}}</a>
             </li>
             <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-design-default has-dropdown">
