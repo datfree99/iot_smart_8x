@@ -84,3 +84,8 @@
   font-size: 20px;
   font-weight: 600;
 }
+
+.layout-admin-custom .breadcrumb-header .breadcrumb {
+  margin: 0;
+  font-size: 20px;
+}

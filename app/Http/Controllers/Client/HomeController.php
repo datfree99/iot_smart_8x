@@ -13,8 +13,19 @@ class HomeController extends Controller
     {
         $sliders = SliderModel::get();
 
+        $category = CategoryModel::where('key', config('category.list_categories.about_us.key'))
+            ->select(['id'])
+            ->first();
+        $aboutUs = collect();
+        if ($category) {
+            $aboutUs = PostModel::where('category_id' ,$category->id)
+                ->first();
+        }
 
-        return view('client.home', compact('sliders'));
+
+
+        return view('client.home', compact('sliders'))
+            ->with('aboutUs', $aboutUs);
     }
 
     public function aboutUs()

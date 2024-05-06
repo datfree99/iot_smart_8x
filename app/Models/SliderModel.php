@@ -31,6 +31,6 @@ class SliderModel extends Model
 
     public function renderTitle()
     {
-        return $this->title;
+        return \App::getLocale() == 'vi' ? $this->title_vi : $this->title_en;
     }
 }

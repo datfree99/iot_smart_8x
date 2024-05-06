@@ -18,11 +18,11 @@ class CreatePostsTable extends Migration
             $table->unsignedBigInteger('category_id')->nullable();
             $table->string('slug')->unique();
             $table->string('title');
-            $table->string('description')->nullable();
+            $table->text('description')->nullable();
             $table->text('contents')->nullable();
             $table->string('image')->nullable();
             $table->string('seo_title')->nullable();
-            $table->string('seo_description')->nullable();
+            $table->text('seo_description')->nullable();
             $table->string('seo_keywords')->nullable();
             $table->enum('status', ['draft','active', 'inactive'])->default('draft');
             $table->timestamps();

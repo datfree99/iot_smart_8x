@@ -7,10 +7,10 @@
 
         <div class="page-wrapper page-right-sidebar">
             <div class="row">
-
                 <div id="content" class="large-9 left col col-divided" role="main">
+                    <h1> {{$post->renderTitle()}} </h1>
                     <div class="page-inner">
-                        {!! $post->contents !!}
+                        {!! $post->renderContents() !!}
                     </div>
                 </div>
 

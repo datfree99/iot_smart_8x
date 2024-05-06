@@ -82,4 +82,14 @@ class PostModel extends Model
     {
         return $this->title;
     }
+
+    public function renderDescription()
+    {
+        return $this->description;
+    }
+
+    public function renderContents()
+    {
+        return $this->contents;
+    }
 }
